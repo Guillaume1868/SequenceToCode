@@ -32,7 +32,7 @@ Chaque technicien atteindra les objectifs suivants en réalisant ce laboratoire:
 
 * Voici le diagramme de séquence à étudier:
 
-![image](https://github.com/user-attachments/assets/95f5f27c-c033-493d-8ba0-8e42eb22a5a8)
+![image](image.png)
 
 * Les informations complémentaires à prendre en compte:
    - [ ] La classe Driver:
