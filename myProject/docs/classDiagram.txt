@@ -1,0 +1,54 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+title Sequence to code
+
+class Entreprise {
+  - drivers : array
+  - vehicles : array
+  --
+  + Entreprise()
+  + assignVehicleToDriver(chassisNumber : string, driverEmailaddress : string) : void
+  + addDriver(driverEmailaddress : string) : void
+  + getDriverByEmailaddress(driverEmailaddress : string) : Driver
+  + addVehicle(chassisNumber : string) : void
+  + getVehicleByChassisNumber(chassisNumber : string) : Vehicle
+}
+
+class Person {
+  + email : string
+  --
+  + Person(email : string)
+}
+
+class Driver {
+  - available : bool
+  --
+  + takeAVehicule(vehicule : Vehicle) : void
+}
+
+class Vehicle {
+  + chassisNumber : string
+  --
+  + Vehicle(chassisNumber : string)
+}
+
+exception DriverUnavailableException {
+}
+exception DriverNotFoundException {
+}
+exception VehicleNotFoundException {
+}
+exception driverEmailaddressehicleNotFoundException {
+}
+
+Entreprise o-- Driver
+Entreprise o-- Vehicle
+Driver ..> Vehicle
+DriverUnavailableException --^ Exception
+DriverNotFoundException --^ Exception
+VehicleNotFoundException --^ Exception
+driverEmailaddressehicleNotFoundException --^ Exception
+Driver--^Person
+
+@enduml
